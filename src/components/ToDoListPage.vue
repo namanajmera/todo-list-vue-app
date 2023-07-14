@@ -11,8 +11,13 @@
 <script>
 export default {
     name:"ToDoListPage",
-    props:{
-        todoItems: Array,
+    // props:{
+    //     todoItems: Array,
+    // }
+    computed: {
+        todoItems() {
+            return this.$store.state.todoItems;
+        }
     }
 }
 </script>

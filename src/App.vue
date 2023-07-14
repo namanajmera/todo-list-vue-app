@@ -2,8 +2,10 @@
   <router-link to="/">Home Page</router-link>
   <router-link to="/about">About Page</router-link>
   <div class="container">
-    <form-page @todoValueCall="todoValueCall"/>
-    <to-do-list-page :todoItems="todoItems"/>
+    <!-- <form-page @todoValueCall="todoValueCall"/> -->
+    <form-page />
+    <!-- <to-do-list-page :todoItems="todoItems"/> -->
+    <to-do-list-page />
   </div>
   <router-view/>
 </template>
@@ -20,14 +22,14 @@ export default {
   },
   data() {
     return {
-      todoItems: [],
+      // todoItems: [],
     }
   },
   methods: {
-    todoValueCall(value){
-      console.log(value);
-      this.todoItems.push(value);
-    }
+    // todoValueCall(value){
+    //   console.log(value);
+    //   // this.todoItems.push(value);
+    // }
   },
 }
 </script>

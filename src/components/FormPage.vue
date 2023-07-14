@@ -19,7 +19,8 @@ export default {
         handleSubmit($event){
             $event.preventDefault();
             console.log(this.todoValue);
-            this.$emit('todoValueCall',this.todoValue)
+            this.$store.commit('mutateTodoItems',this.todoValue)
+            // this.$emit('todoValueCall',this.todoValue)
             this.todoValue = "";
         }
     },
